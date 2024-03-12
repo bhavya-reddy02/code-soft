@@ -1,0 +1,74 @@
+             TASK-2
+
+            CALCULATOR
+
+Design a simple calculator with basic arithmetic operations.
+Prompt the user to input two numbers and an operation choice.
+Perform the calculation and display the result.
+          
+
+CODE:
+#function for addition
+def addition(x, y):
+    return x + y
+
+# function for subtraction
+def subtraction(x, y):
+    return x - y
+
+# function for multiplication
+def multiplication(x, y):
+    return x * y
+
+#function for division
+def divide(x, y):
+    return x / y
+
+
+print("Select operation.")
+print("1.Addition")
+print("2.Subtraction")
+print("3.Multiplication")
+print("4.Divide")
+
+while True:
+    # user input
+    choice = input("Enter choice(1,2,3,4): ")
+
+    # user choice
+    if choice in ('1', '2', '3', '4'):
+        try:
+            input1 = float(input("Enter first number: "))
+            input2 = float(input("Enter second number: "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+
+        if choice == '1':
+            print(input1, "+", input2, "=", addition(input1, input2))
+
+        elif choice == '2':
+            print(input1, "-", input2, "=", subtraction(input1, input2))
+
+        elif choice == '3':
+            print(input1, "*", input2, "=", multiplication(input1, input2))
+
+        elif choice == '4':
+            print(input1, "/", input2, "=", divide(input1, input2))
+        
+     #invalid choice  
+    else:
+        print("Invalid choice")
+
+
+OUTPUT:
+Select operation.
+1.Addition
+2.Subtraction
+3.Multiplication
+4.Divide
+Enter choice(1,2,3,4): 3
+Enter first number: 2
+Enter second number: 4
+2.0 * 4.0 = 8.0
+Enter choice(1,2,3,4):
